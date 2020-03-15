@@ -4,11 +4,19 @@ from selenium.webdriver.common.by import By
 from time import sleep
 import time
 
-options = webdriver.ChromeOptions()
-prefs = {"profile.default_content_setting_values.notifications" : 2}
-options.add_experimental_option("prefs",prefs)
-driver = webdriver.Chrome("C:/Users/Richeek Das/Downloads/Programs/Coding accessories/chromedriver",chrome_options=options)				#opens the browser
-###The above specifies the path to the chromedriver.exe(for Windows)
+###Global variables
+driver = None
+
+###Loads the chromedriver and disables the notifications in chrome
+def load_driver():
+	global driver
+	chromedriver = os.path.abspath("./chromedriver.exe")
+	os.environ["webdriver.chrome.driver"] = chromedriver	
+    options = webdriver.ChromeOptions()
+    prefs = {"profile.default_content_setting_values.notifications" : 2}
+    options.add_experimental_option("prefs",prefs)
+    driver = webdriver.Chrome(chromedriver, chrome_options=options)			#opens the browser
+    ###The above specifies the path to the chromedriver.exe(for Windows)
 
 ###Welcome screen in console
 def welcome_screen():
@@ -90,6 +98,7 @@ def final_work():
     
 ###Define the main function
 def main():
+    load_driver()
     welcome_screen()
     post_info = get_post_info()
     log_in(post_info[0], post_info[1])
