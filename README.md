@@ -1,6 +1,6 @@
 # Facebook-Post-Spammer
 
-Welcome to Facebook Post Spammer **Version INFO : 1.00**
+Welcome to Facebook Post Spammer **Version INFO : 1.01**
 
 *Description :* This program can spam comments on any facebook post visible from your account !
 
