@@ -9,9 +9,9 @@ driver = None
 
 ###Loads the chromedriver and disables the notifications in chrome
 def load_driver():
-	global driver
-	chromedriver = os.path.abspath("./chromedriver.exe")
-	os.environ["webdriver.chrome.driver"] = chromedriver	
+    global driver
+    chromedriver = os.path.abspath("./chromedriver.exe")
+    os.environ["webdriver.chrome.driver"] = chromedriver	
     options = webdriver.ChromeOptions()
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     options.add_experimental_option("prefs",prefs)
