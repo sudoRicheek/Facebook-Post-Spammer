@@ -1,3 +1,4 @@
+import os.path
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -20,7 +21,7 @@ def load_driver():
 
 ###Welcome screen in console
 def welcome_screen():
-    print("Facebook Comment Spammer : Build INFO : 1.00")
+    print("Facebook Comment Spammer : Build INFO : 1.01")
     print("Selenium : 3.141.0")
     print("ChromeDriver 80.0.3987.106 \n")
     print("!!! It is recommended that you don't use your primary FB account to do the spam !!!")
