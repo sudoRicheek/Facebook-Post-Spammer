@@ -18,7 +18,7 @@ def welcome_screen():
     print("!!! It is recommended that you don't use your primary FB account to do the spam !!!")
     print()
 
-###For disabling any actiive notifications that might pop-up after opening Facebook
+###For disabling any active notifications that might pop-up after opening Facebook
 
 
 ###Take the Spam info :
